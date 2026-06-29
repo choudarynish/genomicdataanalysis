@@ -7,10 +7,11 @@ The objective of this pipeline is to process viral DNA sequences of SARS-CoV-2 a
 **Data Sources**
 *   **Raw Sequence Data:** Paired-end sequencing reads (`SRRxxxxxxxx_1.fastq` and `SRRxxxxxxxx_2.fastq`) retrieved from the SRA/ENA
 *   **Reference Genome:** SARS-CoV-2 reference genome (`NC_045512.2`, `GCF_009858895.2`)
+*   **SnpEff Package:** https://pcingola.github.io/SnpEff/download/
 
 **Tools Used**
 *   **FastQC:** Quality check of raw sequencing reads
-0*   **fastp:** Removes sequencing adapters and trims low-quality bases
+*   **fastp:** Removes sequencing adapters and trims low-quality bases
 *   **Burrows-Wheeler Aligner:** Maps the cleaned reads accurately to the reference genome
 *   **SAMtools:** Converts, sorts, and indexes alignment files (SAM to BAM)
 *   **bcftools:** Analyzes read depth and base quality to call genetic variants (SNPs and InDels)
